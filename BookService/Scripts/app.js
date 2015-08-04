@@ -2,6 +2,8 @@
     var self = this;
     self.books = ko.observableArray();
     self.error = ko.observable();
+    // Unit 3 Lab 8
+    self.detail = ko.observable();
 
     var booksUri = '/api/books/';
 
@@ -24,8 +26,6 @@
         });
     }
 
-    // Unit 3 Lab 8
-    self.detail = ko.observable();
 
     // Unit 3 Lab 8
     self.getBookDetail = function (item) {
