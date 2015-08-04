@@ -24,6 +24,16 @@
         });
     }
 
+    // Unit 3 Lab 8
+    self.detail = ko.observable();
+
+    // Unit 3 Lab 8
+    self.getBookDetail = function (item) {
+        ajaxHelper(booksUri + item.Id, 'GET').done(function (data) {
+            self.detail(data);
+        });
+    }
+
     // Fetch the initial data.
     getAllBooks();
 };
